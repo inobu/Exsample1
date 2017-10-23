@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>新車情報</title>
+</head>
+<body>
+	<form method="POST" action="saveAndFlush" th:object="${sampleEntity}">
+		<div>
+			<label>車名：<br /> <input type="text" name="carName" size="50"
+				maxlength="255" />
+			</label>
+		</div>
+		<div>
+			<label>排気量：<br /> <input type="text" name="exhaustGas"
+				size="50" maxlength="255" />
+			</label>
+		</div>
+		<div>
+			<label>シリンダー数：<br /> <input type="text"
+				name="cylinderNumber" size="50" maxlength="255" />
+			</label>
+		</div>
+		<div>
+			<label>最高速度：<br /> <input type="text" name="maxSpeed"
+				size="50" maxlength="255" />
+			</label>
+		</div>
+		<div>
+			<label>馬力：<br /> <input type="text" name="horsePower"
+				size="50" maxlength="255" />
+			</label>
+		</div>
+		<div>
+			<label>重量：<br /> <input type="text" name="carWeight"
+				size="50" maxlength="255" />
+			</label>
+		</div>
+		<div>
+			<label>画像：<br /> <input type="text" name="pictureUrl"
+				size="50" maxlength="255" />
+			</label>
+		</div>
+		<div>
+			<input type="submit" value="登録" name = "saveAndFlush"/>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>edit</title>
+</head>
+<body>
+	<form method="POST" action="saveAndFlush" th:object="${repository}">
+		<div>
+			<input type="hidden" name="id" th:field="*{id}" /> <label>車名：<br />
+				<input type="text" name="carName" size="50" maxlength="255"
+				th:field="*{carName}" />
+			</label>
+		</div>
+		<div>
+			<label>排気量：<br /> <input type="text" name="exhaustGas"
+				size="70" maxlength="255" th:field="*{exhaustGas}" />" />
+			</label>
+		</div>
+		<div>
+			<label>シリンダー数：<br /> <input type="text"
+				name="cylinderNumber" size="50" maxlength="255"
+				th:field="*{cylinderNumber}" />" />
+			</label>
+		</div>
+		<div>
+			<label>最高速度：<br /> <input type="text" name="maxSpeed"
+				size="50" maxlength="255" th:field="*{maxSpeed}" />
+			</label>
+		</div>
+		<div>
+			<label>馬力：<br /> <input type="text" name="horsePower"
+				size="50" maxlength="255" th:field="*{horsePower}" />" />
+			</label>
+		</div>
+		<div>
+			<label>重量：<br /> <input type="text" name="carWeight"
+				size="50" maxlength="255" th:field="*{carWeight}" />
+			</label>
+		</div>
+		<div>
+			<label>画像：<br /> <input type="text" name="pictureUrl"
+				size="50" maxlength="255" th:field="*{pictureUrl}" />
+			</label>
+		</div>
+		<div>
+			<input type="submit" name="saveAndFlush" value="更新" /> <input
+				type="submit" name="delete" value="削除"
+				onclick="return confirm('本当に削除しても良いですか？')" />
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>index</title>
+</head>
+<body>
+	<a href="insert">新規登録</a>
+	<table border="1">
+		<tr>
+			<th>車名</th>
+			<th>排気量</th>
+			<th>シリンダー数</th>
+			<th>最高速度</th>
+			<th>馬力</th>
+			<th>重量</th>
+			<th>画像</th>
+		</tr>
+		<tr th:each="repository : ${repositorys}">
+			<td th:text="${repository.carName}"></td>
+			<td th:text="${repository.exhaustGas}"></td>
+			<td th:text="${repository.cylinderNumber}"></td>
+			<td th:text="${repository.maxSpeed}"></td>
+			<td th:text="${repository.horsePower}"></td>
+			<td th:text="${repository.carWeight}"></td>
+			<td><img th:src="${repository.pictureUrl}"></img></td>
+			<td><a th:href="@{'edit.html?id='}+${repository.id}">編集</a></td>
+		</tr>
+	</table>
+</body>
+</html>
